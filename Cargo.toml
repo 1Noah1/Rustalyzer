@@ -1,0 +1,11 @@
+[package]
+name = "rustalyzer"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+axum = "0.7.9"
+hyper = { version = "1.5.1", features = ["full"] }
+tokio = { version = "1.32.0", features = ["full"] }
+tower = "0.5.1"
+serde_json = "1.0"
