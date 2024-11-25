@@ -1,3 +1,4 @@
+/* 
 #[derive(Debug)]
 pub struct PostMeasurement {
     id: u32,
@@ -10,3 +11,4 @@ pub struct Measurement {
     pub heart_rate: u32,
     pub body_temperature: f32,
 }
+    */

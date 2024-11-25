@@ -1,16 +1,17 @@
 mod error;
 mod model;
-use axum::{
-    routing::get, Router
-};
-use error::not_found_handler;
 mod analyze;
 
+use axum::{
+    routing::{get, post}, Router
+};
+use error::not_found_handler;
+use analyze::analyze_post;
 
 #[tokio::main]
 async fn main() {
     let  app = Router::new()
-    .route("/analyze", get(get_analyze).post(post_analyze))
+    .route("/analyze", post(analyze_post))
     .route("/person/warning", get(person_warning))
     .fallback(not_found_handler);
 
@@ -20,10 +21,6 @@ async fn main() {
 }
  
 
-
-
-// get measurement analysis
-async fn get_analyze() {}
 
 
 
