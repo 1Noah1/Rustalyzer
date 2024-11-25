@@ -4,7 +4,7 @@ use axum::{
     routing::get, Router
 };
 use error::not_found_handler;
-
+mod analyze;
 
 
 #[tokio::main]
@@ -25,8 +25,7 @@ async fn main() {
 // get measurement analysis
 async fn get_analyze() {}
 
-// analyze measurement
-async fn post_analyze() {}
+
 
 // should return a warning based of a person name
 async fn person_warning() -> &'static str{
